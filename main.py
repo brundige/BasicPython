@@ -1,5 +1,25 @@
 # Basic Example of a Simple Python script performs mathematical operations
+#create abstract base class
+from abc import ABC, abstractmethod
 
+class Calculator(ABC):
+    @abstractmethod
+    def divide(self, dividend, divisor):
+        pass
+
+class SimpleCalc(Calculator):
+    def divide(self, dividend, divisor):
+        if divisor == 0:
+            raise ValueError("Undefined when divisor is zero.")
+        else:
+            quotient = dividend//divisor
+            remainder = dividend % divisor
+            return quotient, remainder
+quotient, remainder = divide()
+if remainder is not ValueError:
+    print("Quotient;", quotient)
+    print("Remainder", remainder)
+    
 # Addition
 
 def add(x, y):  # functions are defined using the def keyword x,y are the parameters
