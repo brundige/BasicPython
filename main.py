@@ -15,8 +15,6 @@ class SimpleCalc(Calculator):
             quotient = dividend//divisor
             remainder = dividend % divisor
             return quotient, remainder
-quotient, remainder = divide()
-if remainder is not ValueError:
     print("Quotient;", quotient)
     print("Remainder", remainder)
     
